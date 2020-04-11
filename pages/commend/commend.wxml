@@ -1,0 +1,79 @@
+<!--pages/commend/commend.wxml-->
+
+<!--导航栏-->
+<NavBar></NavBar>
+
+<view class="scroll_container" style="height:calc(100vh - {{otherHeight}}px);">
+<scroll-view scroll-y="true" bind:scrolltolower="reachBottom" lower-threshold="5">
+<view class="con">
+
+<!--轮播图-->
+<view class="commend_swiper">
+    <swiper indicator-dots="{{true}}" indicator-active-color="#1296db" indicator-color="#cdcdcd" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}" circular="{{true}}">
+        <block wx:for="{{swiperList}}" wx:key="album_id">
+            <swiper-item>
+                <navigator hover-class="none" class="swiper-view" url="/pages/album/album?album_id={{item.album_id}}">
+                    <image mode="widthFix" class="swiper-image" src="{{item.img_src}}" />
+                </navigator>   
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<!--分类-->
+<view class="commend_cates">
+    <navigator url="" hover-class="none" wx:for="{{catesList}}" wx:key="_id" wx:for-item="cate">
+        <image src="{{cate.image_small_src}}" mode="widthFix"/>
+        <view >{{cate.name}}</view>
+    </navigator>
+</view>
+
+<!--竖向轮播图-->
+<view class="vercial_swiper">
+    <image src="/icon/toutiao.png" mode="widthFix"/>
+    <swiper vertical="{{true}}" autoplay="{{true}}" interval="{{2500}}" duration="{{500}}" circular="{{true}}">
+        <swiper-item wx:for="{{vercialList}}" wx:key="msg">
+            <navigator hover-class="none" url="">
+                <view>最新</view>
+                {{item.msg}}
+            </navigator>   
+        </swiper-item>
+    </swiper>
+</view>
+
+<!-- 每日精选 -->
+<view class="daily">
+    <view class="daily_bar">
+        <view >
+            每日精选
+            <navigator hover-class="none" url="">
+                <view >更多</view>
+                <image src="/icon/more.png" mode="widthFix"/>
+            </navigator>
+        </view>
+    </view>
+    <view class="daily_img">
+        <block wx:for="{{dailyList}}" wx:key="date">
+            <view>
+                <image src="{{item.img_src}}" mode="widthFix"/>
+            </view>
+        </block>
+    </view>
+</view>
+
+<!-- 图片列表 -->
+<Tabs tabs="{{tabs}}" tabsWidth="150" bind:itemChange="handleItemChange"></Tabs>
+<block wx:for="{{tabs}}" wx:key="id">
+    <view wx:if="{{item.isActive}}">
+        <view class="img_group">
+            <navigator url="" hover-class="none" wx:for="{{imageList}}" wx:key="_id" >
+                <image mode="widthFix" src="{{item.image_small_src}}" />
+            </navigator>
+        </view>
+    </view>
+</block>
+
+
+</view>
+</scroll-view>
+</view>

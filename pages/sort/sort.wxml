@@ -1,0 +1,15 @@
+<!--导航栏-->
+<NavBar></NavBar>
+
+<view class="scroll_container" style="height:calc(100vh - {{otherHeight}}px);">
+<scroll-view scroll-y="true">
+<view class="con">
+    <view class="commend_cates">
+        <navigator url="" hover-class="none" wx:for="{{sortList}}" wx:key="_id">
+            <image src="{{item.image_small_src}}" mode="widthFix"/>
+            <view >{{item.name}}</view>
+        </navigator>
+    </view>
+</view>
+</scroll-view>
+</view>

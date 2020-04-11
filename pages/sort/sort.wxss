@@ -1,0 +1,39 @@
+/* pages/sort/sort.wxss */
+.scroll_container {
+  width: 100vw;
+  overflow: hidden;
+}
+.scroll_container scroll-view {
+  height: 100%;
+  width: calc(100% + 20rpx);
+}
+.scroll_container scroll-view .con {
+  padding-right: 20rpx;
+}
+.commend_swiper {
+  margin-top: 10rpx;
+}
+/*分类导航样式*/
+.commend_cates {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 14rpx 0 0;
+  padding: 0 66rpx;
+}
+.commend_cates navigator {
+  padding: 30rpx 66rpx;
+  width: calc((100vw - 66rpx * 2) / 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+}
+.commend_cates navigator image {
+  width: 100%;
+  border-radius: calc((100vw - 4 * 66rpx)/2);
+}
+.commend_cates navigator view {
+  padding-top: 10rpx;
+  white-space: nowrap;
+}

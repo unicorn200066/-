@@ -1,0 +1,179 @@
+/* pages/commend/commend.wxss */
+
+// 隐藏滚动条
+@pad:20rpx;
+.scroll_container{
+  width: 100vw;
+  overflow: hidden;
+  scroll-view{
+    height: 100%;
+    width: ~"calc(100% + @{pad})";
+    .con{
+      padding-right: @pad;
+    }
+  }
+}
+
+.commend_swiper{
+  margin-top: 10rpx;
+}
+
+/*横向轮播图样式*/
+@swiperWidth:95vw;
+@swiperHeight:310rpx;
+@swiperMargin:(100-@swiperWidth)/2;
+
+swiper{
+  height:@swiperHeight;
+}
+
+.swiper-view{
+  overflow: hidden;
+  width: @swiperWidth;
+  height: @swiperHeight;
+  border-radius:5px;
+  margin: 0 @swiperMargin 0 @swiperMargin;
+}
+
+.swiper-image{
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@imgWidth:80rpx;
+/*分类导航样式*/
+.commend_cates{
+  height: 150rpx;
+  display: flex;
+  margin:34rpx 0 14rpx;
+  justify-content: space-around;
+  navigator{
+    width: @imgWidth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25rpx;
+    image{
+      width: @imgWidth;
+      height: @imgWidth;
+      border-radius:20rpx;
+    }
+    view{
+      padding-top: 10rpx;
+      white-space: nowrap;
+    }
+  }
+}
+
+@vsHeight:50rpx;
+@vsPadding:2rpx;
+/*竖向轮播图样式*/
+.vercial_swiper{
+  background-color: rgba(244, 244, 244, 0.6);
+  height:@vsPadding*2+@vsHeight;
+  border-radius: (@vsPadding*2+@vsHeight)/2;
+  margin:10rpx 20rpx 18rpx;
+  display: flex;
+  align-items: center;
+  image{
+    width: 180rpx;
+    margin-left: 20rpx;
+  }
+  swiper{
+    height:@vsHeight;
+    width: 100%;
+    font-size: 24rpx;
+    padding-right: (@vsPadding*2+@vsHeight)/2;
+    swiper-item{
+      display: flex;
+      align-items: center;
+      navigator{
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: flex;
+        align-items: center;
+        view{
+          margin-left: 20rpx;
+          margin-right: 10rpx;
+          padding: 1rpx 6rpx;
+          border-radius: 4rpx;
+          color: #FF328E;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 18rpx;
+          background-color: #FFD6EE;
+        }
+      }
+    }
+  }
+}
+
+/*每日精选*/
+
+
+.daily{
+  height: 300rpx;
+  margin-top: 40rpx;
+  .daily_bar{
+    margin:0 20rpx 10rpx;
+    view{
+      display: flex;
+      align-items: center;
+      justify-content:space-between;
+      navigator{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        view{
+          color: #9E9E9E;
+        }
+        image{
+          width: 40rpx;
+        }
+      }
+    }
+  }
+
+  .daily_img{
+    display: flex;
+    margin: 0 10rpx;
+    view{
+      flex:1;
+      height: 200rpx;
+      margin: 10rpx;
+      overflow: hidden;
+      border-radius: 10rpx;
+      image{
+        width: 100%;
+        
+      }
+    }
+  }
+}
+
+// 图片列表
+@imgMargin:10rpx;
+@itemWidth:~'calc((100vw - @{imgMargin} * 2) / 3)';
+@groupHeight:~'calc((100vw - @{imgMargin} * 2) / 3 * 2)';
+
+.img_group{
+  display: flex;
+  flex-wrap:wrap;
+  height: @groupHeight;
+  align-content: flex-start;
+  margin: 14rpx 0 0;
+  padding:0 @imgMargin;
+  navigator{
+    padding: @imgMargin;
+    width:@itemWidth;
+    height:@itemWidth;
+    image{
+      width: 100%;
+      border-radius: 10rpx;
+    }
+  }
+}
