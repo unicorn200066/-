@@ -1,0 +1,28 @@
+/* components/Tabs/Tabs.wxss */
+.tabs_title{
+    display: flex;
+    justify-content: space-around;
+}
+.tabs_item{
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 28rpx;
+    padding-bottom: 6rpx;
+}
+.active{
+    color:#1296db;
+    border-bottom: 4rpx solid currentColor;
+}
+
+// 隐藏滚动条
+@pad:20rpx;
+.tabs_container{
+  height: 50rpx;
+  overflow: hidden;
+  scroll-view{
+    height: 100%;
+    width: 100%;
+  }
+}

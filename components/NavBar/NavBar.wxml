@@ -1,0 +1,10 @@
+<!--components/NavBar/NavBar.wxml-->
+<view class="nav_bar" style="height:{{navHeight}}px;margin-top:{{statusHeight}}px">
+    <button class="btn_share" open-type="share">
+        <image src="/icon/share.png" mode="widthFix"/>
+    </button>
+    <navigator style="border-radius:{{navHeight/2}}px" url="/pages/search/search" open-type="navigate">
+        <image src="/icon/search.png" mode="widthFix"/>
+        搜索头像
+    </navigator>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/find/find.wxml-->
+<view class="nav_bar" style="height:{{navHeight}}px;margin-top:{{statusHeight}}px">
+    <button class="btn_share" open-type="share">
+        <image src="/icon/share.png" mode="widthFix"/>
+    </button>
+    <view style="border-radius:{{navHeight/2}}px" url="/pages/search/search" open-type="navigate">
+        发现
+    </view>
+</view>
+<view class="commend_cates">
+    <navigator url="" hover-class="none" wx:for="{{findList}}" wx:key="_id">
+        <image src="{{item.image_small_src}}" mode="widthFix"/>
+        <view >{{item.name}}</view>
+    </navigator>
+</view>

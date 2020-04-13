@@ -1,0 +1,63 @@
+/* pages/find/find.wxss */
+.nav_bar{
+    margin-right: 0px;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn_share{
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        left: 16rpx;      
+        background-color: white;
+        color: #999999;
+        border-radius: 0rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50rpx;
+        image{
+            margin: 0;
+            width: 50rpx;
+        }
+    }
+    
+    view{
+        display: flex;
+        height:100%;
+        justify-content: center;
+        align-items: center;
+        letter-spacing:2rpx;
+        font-size: 34rpx;
+    }
+}
+
+//图片
+@imgMargin:60rpx;
+@itemWidth:~'calc((100vw - @{imgMargin} * 2) / 2)';
+
+.commend_cates{
+  display: flex;
+  flex-wrap:wrap;
+  margin: 14rpx 0 0;
+  padding:60rpx @imgMargin 0;
+  navigator{
+    padding:30rpx @imgMargin;
+    width:@itemWidth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    image{
+        width: 100%;
+        border-radius: 16rpx;
+    }
+    view{
+      padding-top: 10rpx;
+      white-space: nowrap;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/* pages/find/find.wxss */
+.nav_bar {
+  margin-right: 0px;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav_bar .btn_share {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 16rpx;
+  background-color: white;
+  color: #999999;
+  border-radius: 0rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50rpx;
+}
+.nav_bar .btn_share image {
+  margin: 0;
+  width: 50rpx;
+}
+.nav_bar view {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2rpx;
+  font-size: 34rpx;
+}
+.commend_cates {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 14rpx 0 0;
+  padding: 60rpx 60rpx 0;
+}
+.commend_cates navigator {
+  padding: 30rpx 60rpx;
+  width: calc((100vw - 60rpx * 2) / 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+.commend_cates navigator image {
+  width: 100%;
+  border-radius: 16rpx;
+}
+.commend_cates navigator view {
+  padding-top: 10rpx;
+  white-space: nowrap;
+}
