@@ -45,6 +45,7 @@ Page({
     ],
     swiperList:[],  //横向轮播图
     catesList:[],   //分类导航栏
+    catesUrls:["DIY","DIY","DIY","DIY"],
     vercialList:[], //竖向轮播图
     dailyList:[],   //每日精选
     imageList:[],   //图片列表

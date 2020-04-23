@@ -1,4 +1,4 @@
-// pages/image/image.js
+// pages/edit/edit.js
 Page({
 
   /**
@@ -6,42 +6,14 @@ Page({
    */
   data: {
     navHeight:getApp().globalData.navHeight,
-    statusHeight:getApp().globalData.statusHeight,
+    statusHeight:getApp().globalData.statusHeight
+
   },
 
-  back(){
+  back:function(){
     wx.navigateBack({
       delta: 1
     });  
-  },
-
-  sa(){
-    const query = wx.createSelectorQuery()
-    query.select('#myCanvas')
-      .fields({ node: true, size: true })
-      .exec((res) => {
-        const canvas = res[0].node
-        wx.canvasToTempFilePath({
-          canvas: canvas,
-          success: (result) => {
-            wx.saveImageToPhotosAlbum({
-              filePath: result.tempFilePath,
-              success: (res) => {
-                console.log(res)
-                wx.showToast({
-                  title: '保存成功',
-                  icon: 'success',
-                  
-                })
-              },
-              fail(res) {
-                  console.log(res)
-              }
-          }) 
-          },
-        }, this);
-      })
-
   },
 
   /**
@@ -70,17 +42,12 @@ Page({
         ctx.scale(dpr, dpr)
 
         ctx.fillStyle = 'white';  
-        ctx.fillRect(0,0,width,height)
-        ctx.save()
-        ctx.beginPath()
-        ctx.arc(width/2, height/2, width/2, 0, 2*Math.PI)
-        ctx.clip() 
+        ctx.fillRect(0,0,width,height) 
         var image=canvas.createImage()
         image.src='/icon/temp1.png'
         image.onload = () => {
           ctx.drawImage(image,0,0,width,height)
-          ctx.restore()
         }
       })
-  },
+  }
 })

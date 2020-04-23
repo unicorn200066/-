@@ -8,7 +8,8 @@
     "pages/album/album",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/image/image"
+    "pages/image/image",
+    "pages/edit/edit"
   ],
   "window": {
     "backgroundTextStyle": "light",

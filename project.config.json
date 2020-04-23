@@ -55,6 +55,12 @@
 					"pathName": "pages/image/image",
 					"query": "img_id=img_1",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/edit/edit",
+					"pathName": "pages/edit/edit",
+					"scene": null
 				}
 			]
 		}
