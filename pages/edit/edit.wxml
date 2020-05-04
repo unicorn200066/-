@@ -1,0 +1,13 @@
+<!--pages/edit/edit.wxml-->
+<view class="nav_bar" style="height:{{navHeight}}px;margin-top:{{statusHeight}}px">
+    <image src="/icon/back.png" bind:tap="back" mode="widthFix"/>
+    <view style="border-radius:{{navHeight/2}}px">
+        发现
+    </view>
+</view>
+
+<view >
+    <view class="img">
+        <canvas type="2d" id="myCanvas"></canvas>
+    </view>
+</view>

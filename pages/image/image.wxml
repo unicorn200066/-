@@ -1,0 +1,12 @@
+<!--pages/image/image.wxml-->
+<view class="nav_bar" style="height:{{navHeight}}px;margin-top:{{statusHeight}}px">
+    <image src="/icon/back.png" bind:tap="back" mode="widthFix"/>
+</view>
+<view >
+    <view class="img">
+        <canvas type="2d" id="myCanvas"></canvas>
+    </view>
+    <view class="function">
+        <p bind:tap="sa">dian</p>
+    </view>
+</view>

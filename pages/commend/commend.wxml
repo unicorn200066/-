@@ -22,10 +22,12 @@
 
 <!--分类-->
 <view class="commend_cates">
-    <navigator url="" hover-class="none" wx:for="{{catesList}}" wx:key="_id" wx:for-item="cate">
-        <image src="{{cate.image_small_src}}" mode="widthFix"/>
-        <view >{{cate.name}}</view>
-    </navigator>
+    <block wx:for="{{catesList}}" wx:key="_id" wx:for-item="cate">
+        <navigator url="/pages/{{cate.url}}/{{cate.url}}" hover-class="none" >
+            <image src="{{cate.image_small_src}}" mode="widthFix"/>
+            <view >{{cate.name}}</view>
+        </navigator>
+    </block>
 </view>
 
 <!--竖向轮播图-->
@@ -66,8 +68,8 @@
 <block wx:for="{{tabs}}" wx:key="id">
     <view wx:if="{{item.isActive}}">
         <view class="img_group">
-            <navigator url="" hover-class="none" wx:for="{{imageList}}" wx:key="_id" >
-                <image mode="widthFix" src="{{item.image_small_src}}" />
+            <navigator url="/pages/image/image?img_id={{item._id}}" hover-class="none" wx:for="{{imageList}}" wx:key="_id" >
+                <image mode="widthFix" src="{{item.image_small_src}}" data-imgSrc="{{item.image_middle_src}}"/>
             </navigator>
         </view>
     </view>

@@ -7,7 +7,9 @@
     "pages/search/search",
     "pages/album/album",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/image/image",
+    "pages/edit/edit"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -42,9 +44,9 @@
         "selectedIconPath": "icon/user-fill.png"
       }
     ],
-    "color":"#cdcdcd",
-    "selectedColor":"#1296db",
-    "borderStyle":"white"
+    "color": "#cdcdcd",
+    "selectedColor": "#1296db",
+    "borderStyle": "white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
